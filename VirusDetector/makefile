@@ -28,10 +28,10 @@ run: myVirusDetector
 	@./myVirusDetector infected.txt signatures
 
 debug: myVirusDetector
-	@gdb ./myVirusDetector
+	@gdb -q ./myVirusDetector
 
 memcheck: myVirusDetector
-	valgrind --leak-check=full --show-leak-kinds=all ./myVirusDetector infected.txt signatures
+	valgrind --leak-check=full ./myVirusDetector
 
 
 
