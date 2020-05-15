@@ -26,12 +26,13 @@ struct link {
 	link *next;
 };
 
-virus* make_new_virus(unsigned short length, char* name, char* signature);
+link* make_new_link(virus* new_virus);
 link* list_append(link* virus_list, virus* data);
 void list_print(link* virus_list);
 void list_free(link* virus_list);
 
 link* make_list(FILE* signatures);
-void detect_virus(char *buffer, link *virus_list, unsigned int size)
+void detect_virus(char *buffer, link *virus_list, unsigned int size);
+void print_hex(char* buffer, int length);
 
 #endif
